@@ -10,3 +10,11 @@
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
+
+.navbar {
+  margin: 0;
+  color: transparent; 
+  a {
+    background-color: transparent;
+  }
+}

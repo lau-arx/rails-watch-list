@@ -1,0 +1,27 @@
+<div class="banner">
+  <h1><%= @list.name %></h1>
+</div>
+
+<ul>
+  <div class="grid">
+    <% @list.bookmarks.each do |bookmark| %>
+      <div class="movie-card">
+        <li>
+          <%= image_tag asset_url(bookmark.movie.poster_url), alt: "Movie Poster", class: "logo"%>
+          <h5><%= bookmark.movie.title %> <span class="rating">Rating: <%= bookmark.movie.rating %></span></h5>
+          <p class="overview"><%= bookmark.movie.overview %></p>
+          <p class="comment"><%= bookmark.comment %></p>
+          <%= link_to "Delete bookmark", bookmark_path(bookmark), method: :delete, data: { confirm: "Are you sure?" }, class: "btn-red-thin" %>
+        </li>
+      </div>
+    <% end %>
+  </div>
+</ul>
+
+
+<div class="buttons">
+  <%= link_to "Add a bookmark", new_list_bookmark_path(@list), class: "btn-green" %>
+  <%= link_to "Back to list", lists_path, class: "btn-green" %>
+</div>
+
+

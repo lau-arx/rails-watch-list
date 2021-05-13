@@ -1,0 +1,33 @@
+<div class="banner">
+  <div class="container">
+    <h1>Save your favorite movies</h1>
+  </div>
+</div>
+
+<div class="category-title">
+  <h3>My lists</h3>
+  <div class="btn-green">
+    <%= link_to "Create a list", new_list_path %>
+  </div>
+</div>
+
+
+<ul>
+  <div class="grid">
+    <% @lists.each do |list|  %>
+      <div class="list-card">
+        <li>
+          <h5><%= list.name %></h5>
+          <div class="gradient">
+            <%= image_tag asset_url(list.img_url), alt: "List Image" %>
+          </div>
+          <div class="buttons">
+            <%= link_to 'Go to list', list_path(list), class: 'btn-black-thin'%>
+            <%= link_to "Delete list", list_path(list), method: :delete, data: { confirm: "Are you sure?" }, class: 'btn-red-thin ' %>
+          </div>
+        </li>
+      </div>
+      <% end %>
+    </div>
+</ul>
+
