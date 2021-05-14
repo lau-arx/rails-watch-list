@@ -29,18 +29,20 @@
 
 <hr>
 
-<h2>Reviews</h2>
+<h2 id="review">Reviews</h2>
 
 <div class="grid-two">
 
   <ul clas="grid-item">
+    <% @list.reviews.each do |review| %>
     <li>
-    <div class="review-card">
-        <% @list.reviews.each do |review| %>
+      <div class="review-card">
+        <div class="text">
           <h5><%= review.rating %><i class="fas fa-star" style="color:yellow;"></i></h5>
           <p><%= review.content.capitalize %></p>
-          <%= link_to raw('<i class="fas fa-trash-alt"></i>'), review_path(review), method: :delete, data: { confirm: "Are you sure?" }, class: "btn-red-thin" %>
-        <% end %>
+        </div>    
+        <%= link_to raw('<i class="fas fa-trash-alt"></i>'), review_path(review), method: :delete, data: { confirm: "Are you sure?" }, class: "btn-red-thin" %>
+      <% end %>
       </div>
     </li>
   </ul>
@@ -50,7 +52,7 @@
     <h3>Add a review</h3>
     <%= simple_form_for([@list, @review]) do |f| %>
       <%= f.input :content %>
-      <%= f.input :rating %> 
+      <%= f.input :rating, :collection => 0..10  %> 
       <%= f.submit %>
     <% end %>
   </div>

@@ -54,7 +54,9 @@ input[type="submit"] {
 
 form {
 	background-color: white;
+	width: 90%;
 	border-radius: 8px;
 	display: flex;
 	flex-direction: column;
+	justify-self: center;
 }

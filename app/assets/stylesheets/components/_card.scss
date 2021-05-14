@@ -10,7 +10,8 @@
   flex-direction: column;
   align-items: center;
   position: relative;
-  margin-bottom: 40px;
+  margin-bottom: 24px;
+  justify-self: center;
 
   h3 {
     text-align: center;
@@ -50,6 +51,7 @@
   box-shadow: 1px 1px 1px rgba($color: gray, $alpha: 0.1);
   border-radius: 4px;
   position: relative;
+  justify-self: center;
 
   .logo {
     width: 100%;
@@ -104,12 +106,17 @@
   padding: 10px;
   justify-content: space-between;
   align-content: center;
-  align-self: center;
   flex-wrap: nowrap;
   margin-left: 2%;
+  justify-self: center;
+  margin-bottom: 8px;
 
   p, h5 {
     margin-bottom: 0;
     margin-top: 0;
+  }
+
+  .text {
+    margin-left: 24px;
   }
 }
