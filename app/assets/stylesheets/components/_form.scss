@@ -1,46 +1,60 @@
 input {
   background-color: white;
-  border: 1px solid $light-gray;
+  border: 2px solid $light-gray;
   border-radius: 8px;
   padding: 8px;
-
-  box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
 	outline: none;
-	display: block;
-	width: 100%;
+	width: 90%;
 	padding: 7px;
-	border-bottom: 1px solid #ddd;
 	background: white;
 	margin-bottom: 10px;
-	height: 45px;
+	margin-top: 20px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 label {
   padding: 8px 8px;
+	margin-top: 20px;
   width: 20%;
+	font-weight: bold;
   font-family: 'Open Sans Condensed', sans-serif;
+	margin-left: 20px;
+}
+
+input[type="textarea"] {
+	width: 100%;
+	margin-top: 10px;
+}
+
+textarea {
+	width: 90%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 input[type="submit"] {
-  -moz-box-shadow: inset 0px 1px 0px 0px #45D6D6;
-	-webkit-box-shadow: inset 0px 1px 0px 0px #45D6D6;
-	box-shadow: inset 0px 1px 0px 0px #45D6D6;
-	background-color: #2CBBBB;
-	border: 1px solid #27A0A0;
+  box-shadow: inset 0px 1px 0px 0px #45D6D6;
+	background-color: $green;
 	display: inline-block;
 	cursor: pointer;
 	color: #FFFFFF;
 	font-family: 'Open Sans Condensed', sans-serif;
-	font-size: 20px;
-	padding: 8px 18px;
+	font-size: 16px;
+	padding: 8px 8px;
 	text-decoration: none;
 	text-transform: uppercase;
   width: 30%;
-  justify-content: flex-end;
+	margin-left: 3%;
+	margin-top: 3%;
 }
+
 
 form {
 	background-color: white;
+	border-radius: 8px;
+	display: flex;
+	flex-direction: column;
 }

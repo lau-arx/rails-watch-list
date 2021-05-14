@@ -3,8 +3,13 @@
   <%= link_to "Back to lisk", lists_path(@list), class: "btn-black" %>
 </div>
 
-<h1>Create your bookmark</h1>
+<div class="container">
 
-<%= render 'form', list: @list, bookmark: @bookmark %>
+  <h1>Create your bookmark</h1>
+
+  <%= render 'form', list: @list, bookmark: @bookmark %>
+
+</div>
+
 
 
