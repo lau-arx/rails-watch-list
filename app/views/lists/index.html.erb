@@ -1,4 +1,4 @@
-<div class="banner">
+<div class="banner home">
   <div class="container">
     <h1>Save your favorite movies</h1>
   </div>
@@ -23,7 +23,7 @@
           </div>
           <div class="buttons">
             <%= link_to 'Go to list', list_path(list), class: 'btn-black-thin'%>
-            <%= link_to "Delete list", list_path(list), method: :delete, data: { confirm: "Are you sure?" }, class: 'btn-red-thin ' %>
+            <%= link_to "Delete", list_path(list), method: :delete, data: { confirm: "Are you sure?" }, class: 'btn-red-thin ' %>
           </div>
         </li>
       </div>

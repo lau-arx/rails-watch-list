@@ -1,5 +1,7 @@
-<div class="banner">
-  <h1><%= @list.name %></h1>
+<div class="banner gradient">
+  <div class="image" style="background-image:url(<%=@list.img_url%>);">
+    <h1><%= @list.name %></h1>
+  </div>
 </div>
 
 <ul>
@@ -8,10 +10,10 @@
       <div class="movie-card">
         <li>
           <%= image_tag asset_url(bookmark.movie.poster_url), alt: "Movie Poster", class: "logo"%>
-          <h5><%= bookmark.movie.title %> <span class="rating">Rating: <%= bookmark.movie.rating %></span></h5>
+          <h5 class="bold"><%= bookmark.movie.title %> <span class="rating"><%= bookmark.movie.rating %><i class="fas fa-star" style="color:yellow;"></i></span></h5>
           <p class="overview"><%= bookmark.movie.overview %></p>
-          <p class="comment"><%= bookmark.comment %></p>
-          <%= link_to "Delete bookmark", bookmark_path(bookmark), method: :delete, data: { confirm: "Are you sure?" }, class: "btn-red-thin" %>
+          <p class="comment"><i class="fas fa-quote-left">     </i><%= "     "+bookmark.comment.capitalize %></p>
+          <%= link_to raw('<i class="fas fa-trash-alt"></i>'), bookmark_path(bookmark), method: :delete, data: { confirm: "Are you sure?" }, class: "btn-red-thin" %>
         </li>
       </div>
     <% end %>

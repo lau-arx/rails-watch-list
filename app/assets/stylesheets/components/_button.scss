@@ -25,9 +25,10 @@ a {
 
 .btn-red-thin {
   color: $red;
+  font-weight: bold;
   padding: 5px;
   border-radius: 4px;
-  border: 1px solid $red;
+  // border: 1px solid $red;
 
   &:hover {
     color: pink;
