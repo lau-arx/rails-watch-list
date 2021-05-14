@@ -17,7 +17,7 @@
     <% @lists.each do |list|  %>
       <div class="list-card">
         <li>
-          <h3><%= list.name %></h5>
+          <h3><%= list.name.capitalize %></h5>
           <div class="gradient">
               <%= cl_image_tag list.photo.key, alt: "List photo", crop: :fill, class: "img" %>
           </div>
