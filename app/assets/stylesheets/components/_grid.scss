@@ -3,6 +3,7 @@
   grid-template-columns: 1fr 1fr 1fr;
   width: 100%;
   margin-bottom: 20vh;
+  grid-auto-rows: auto;
 }
 
 .grid-two {
@@ -12,4 +13,5 @@
   align-items: start;
   justify-content: center;
   margin-bottom: 20vh;
+  grid-auto-rows: auto;
 }
