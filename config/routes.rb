@@ -7,5 +7,6 @@ Rails.application.routes.draw do
   end
 
   resources :bookmarks, only: [ :destroy ]
+  resources :list, except: :index
 
 end
