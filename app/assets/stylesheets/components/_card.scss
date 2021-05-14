@@ -6,25 +6,25 @@
   border: 1px solid $light-gray;
   box-shadow: 1px 1px 1px rgba($color: gray, $alpha: 0.1);
   border-radius: 6px;
-
-  li {
-    position: relative;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
 
   h3 {
     text-align: center;
     font-weight: bold;
     color: white;
     position: absolute;
-    top: 40%;
+    top: 50%;
     left: 40%;
     z-index: 2;
     text-decoration: underline;
   }
 
   .gradient {
-    background-color: rgba($color: #000000, $alpha: 0.8);
-    z-index: 1
+    width: 100%;
+    height: 100%;
   }
 
   .img {
@@ -33,6 +33,11 @@
     object-fit: cover;
     z-index: -1;
     opacity: 0.8;
+  }
+
+  .buttons {
+    height: 20%;
+    background-color: white;
   }
 }
 
@@ -85,4 +90,17 @@
     bottom: 12px;
     margin-left: 1%;
   }
+}
+
+.review-card {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid $light-gray;
+  background-color: white;
+  align-items: center;
+  width: 90%;
+  border-radius: 6px;
+  justify-content: space-between;
+  align-content: center;
+  flex-wrap: nowrap;
 }

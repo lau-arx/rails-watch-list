@@ -46,6 +46,16 @@ a {
   }
 }
 
+.btn-black {
+  padding: 5px;
+  border-radius: 4px;
+  color: $gray;
+
+  &:hover {
+    color: $medium-gray;
+  }
+}
+
 .btn-green {
   background-color: $green;
   padding: 6px 16px;
@@ -60,10 +70,15 @@ a {
   display: flex; 
   justify-content: space-between;
   align-items: center;
+  background-color: white;
 
   a {
-    margin: 2%;
+    margin: 1%;
     text-align: center;
     justify-content: center;
   }
+}
+
+.end {
+  justify-content: flex-end;
 }

@@ -1,7 +1,14 @@
-<div class="banner gradient">
-  <%# <div class="image" style="background-image:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%=@list.img_url%>);"> %>
+<div class="buttons end">
+  <%= link_to "My lists", root_path, class: "btn-black" %>
+  <%= link_to "New list", new_list_path, class: "btn-black" %>
+</div>
+
+<div class="banner show" class="image" style="color:transparent;background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @list.photo.key %>')">
     <h1><%= @list.name %></h1>
-  </div>
+</div>
+
+<div class="buttons end">
+  <%= link_to "Add a movie", new_list_bookmark_path(@list), class: "btn-green" %>
 </div>
 
 <ul>
@@ -20,10 +27,36 @@
   </div>
 </ul>
 
+<hr>
 
-<div class="buttons">
-  <%= link_to "Add a bookmark", new_list_bookmark_path(@list), class: "btn-green" %>
-  <%= link_to "Back to list", root_path, class: "btn-green" %>
+<h2>Reviews</h2>
+
+<div class="grid-two">
+
+  <ul clas="grid-item">
+    <li>
+    <div class="review-card">
+        <% @list.reviews.each do |review| %>
+          <h5><%= review.rating %><i class="fas fa-star" style="color:yellow;"></i></h5>
+          <p><%= review.content.capitalize %></p>
+          <%= link_to raw('<i class="fas fa-trash-alt"></i>'), review_path(review), method: :delete, data: { confirm: "Are you sure?" }, class: "btn-red-thin" %>
+        <% end %>
+      </div>
+    </li>
+  </ul>
+
+
+  <div class="grid-item">
+    <h3>Add a review</h3>
+    <%= simple_form_for([@list, @review]) do |f| %>
+      <%= f.input :content %>
+      <%= f.input :rating %> 
+      <%= f.submit %>
+    <% end %>
+  </div>
 </div>
+
+
+
 
 

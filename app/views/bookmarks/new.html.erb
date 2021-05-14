@@ -1,7 +1,10 @@
+<div class="buttons end">
+  <%= link_to "My lists", root_path, class: "btn-black" %>
+  <%= link_to "Back to lisk", lists_path(@list), class: "btn-black" %>
+</div>
+
 <h1>Create your bookmark</h1>
 
 <%= render 'form', list: @list, bookmark: @bookmark %>
 
-<%= link_to "My Lists", root_path, class: "btn-green" %>
-<%= link_to "Back to lisk", lists_path(@list), class: "btn-green" %>
 

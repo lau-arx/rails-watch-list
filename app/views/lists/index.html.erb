@@ -19,9 +19,7 @@
         <li>
           <h3><%= list.name %></h5>
           <div class="gradient">
-            <%# <% if list.photo.key != nil %> %>
               <%= cl_image_tag list.photo.key, alt: "List photo", crop: :fill, class: "img" %>
-            <%# <% end %> %>
           </div>
           <div class="buttons">
             <%= link_to 'Go to list', list_path(list), class: 'btn-black-thin'%>

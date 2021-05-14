@@ -1,5 +1,9 @@
-<h1>Create your list</h1>
+<div class="buttons end">
+  <%= link_to "My lists", root_path, class: "btn-black" %>
+</div>
 
-<%= render 'form', list: @list %>
+<div class="container">
+  <h1>Create your list</h1>
 
-<%= link_to "Back to list", root_path, class: "btn-green" %>
+  <%= render 'form', list: @list %>
+</div>
